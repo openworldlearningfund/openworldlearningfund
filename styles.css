@@ -1,3 +1,4 @@
+/* Existing styles */
 :root {
     --primary: #2c5f96;
     --secondary: #4da167;
@@ -42,6 +43,129 @@ header h1 {
     font-size: 2.2rem;
 }
 
+/* New Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background: white;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: var(--primary);
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.slide {
+    display: none;
+    padding: 30px;
+}
+
+.slide.active {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+@media (min-width: 768px) {
+    .testimonial-content {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.testimonial-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary);
+}
+
+.quote {
+    flex: 1;
+}
+
+.quote p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.quote cite {
+    display: block;
+    font-weight: bold;
+    color: var(--primary);
+    font-style: normal;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(44, 95, 150, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1.5rem;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: var(--primary);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background: var(--primary);
+}
+
+/* Existing CTA and Footer */
 .cta {
     padding: 80px 0;
     text-align: center;
